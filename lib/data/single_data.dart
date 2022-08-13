@@ -11,11 +11,4 @@ mixin Data {
 
   @override
   int get hashCode => super.hashCode;
-
-  fromJson(Map<String, dynamic> json);
-}
-
-class EmptyData with Data {
-  @override
-  fromJson(Map<String, dynamic> json) {}
 }

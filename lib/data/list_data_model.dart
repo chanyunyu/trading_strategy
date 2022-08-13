@@ -24,9 +24,7 @@ mixin ListDataModel<T extends ListData> on ChangeNotifier {
   bool get isEmpty => _data.isEmpty;
 
   init({T? emptyData}) async {
-    if (emptyData == null) {
-      _data = EmptyListData() as T;
-    } else {
+    if (emptyData != null) {
       _data = emptyData;
     }
     await refresh();

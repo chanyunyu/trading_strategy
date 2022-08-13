@@ -8,9 +8,7 @@ mixin SingleDataModel<T extends Data> on ChangeNotifier {
   T get data => _data;
 
   init({T? emptyData}) async {
-    if (emptyData == null) {
-      _data = EmptyData() as T;
-    } else {
+    if (emptyData != null) {
       _data = emptyData;
     }
     T? newData = await loadFromNetwork();

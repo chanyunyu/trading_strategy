@@ -34,11 +34,4 @@ mixin ListData<T extends Data> {
   }
 
   String get loadMoreIdentifier => '';
-
-  fromJson(List<dynamic> json);
-}
-
-class EmptyListData with ListData {
-  @override
-  fromJson(List json) {}
 }
