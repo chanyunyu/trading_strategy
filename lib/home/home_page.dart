@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ElevatedButton(
         onPressed: () {
-          Navigator.of(context).pushNamed(Routes.stockTradingStrategy);
+          Navigator.of(context).pushNamed(Routes.stockTradingStrategy, arguments: {'stockCode': '688599'});
         },
         child: const Text('天合光能交易测试'),
       ),

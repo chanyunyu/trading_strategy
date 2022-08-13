@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 
 import 'list_data.dart';
-import 'single_data.dart';
 
 mixin ListDataModel<T extends ListData> on ChangeNotifier {
   final EasyRefreshController controller = EasyRefreshController();
@@ -17,7 +16,7 @@ mixin ListDataModel<T extends ListData> on ChangeNotifier {
 
   set source(T data) => _data = data;
 
-  List<Data> get data => _data.data;
+  List get data => _data.data;
 
   int get itemCount => _data.itemCount;
 
