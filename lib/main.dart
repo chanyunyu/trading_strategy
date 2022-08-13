@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trading_strategy/routes/routes.dart';
 
 import 'home/home.dart';
 
@@ -17,6 +18,7 @@ class CancerApp extends StatelessWidget {
         primarySwatch: Colors.orange,
       ),
       home: const HomePage(),
+      routes: routesMapping,
     );
   }
 }
