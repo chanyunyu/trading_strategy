@@ -14,3 +14,8 @@ mixin Data {
 
   fromJson(Map<String, dynamic> json);
 }
+
+class EmptyData with Data {
+  @override
+  fromJson(Map<String, dynamic> json) {}
+}

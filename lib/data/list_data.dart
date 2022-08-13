@@ -37,3 +37,8 @@ mixin ListData<T extends Data> {
 
   fromJson(List<dynamic> json);
 }
+
+class EmptyListData with ListData {
+  @override
+  fromJson(List json) {}
+}
