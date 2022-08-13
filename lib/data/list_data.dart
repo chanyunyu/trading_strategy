@@ -20,8 +20,10 @@ mixin ListData<T extends Data> {
   @mustCallSuper
   remove(T data) => _data.remove(data);
 
+  @mustCallSuper
   insert(int index, T newData) => _data.insert(index, newData);
 
+  @mustCallSuper
   insertAll(int index, List<T> newData) => _data.insertAll(index, newData);
 
   combine(other) {
