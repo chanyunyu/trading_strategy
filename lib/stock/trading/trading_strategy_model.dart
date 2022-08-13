@@ -11,5 +11,8 @@ class TradingStrategyModel extends ChangeNotifier with ListDataModel<DailyStockL
   }
 
   @override
-  Future<DailyStockListData> loadFromNetwork() => TradingStrategyNetwork.loadDailyStockListData(stockCode: stockCode);
+  Future<DailyStockListData> loadFromNetwork() => TradingStrategyNetwork.loadStockListData(
+        stockCode: stockCode,
+        startDate: '20220101',
+      );
 }
