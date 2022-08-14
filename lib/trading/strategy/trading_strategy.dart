@@ -89,6 +89,6 @@ class TradingStrategy {
     }
     numberOfStock += changedNumber;
     cashAssets -= changedNumber * currentPrice;
-    debugPrint('当前价=$currentPrice,数量=$numberOfStock,股票资产=$stockAssets,现金资产=$cashAssets,总资产=$totalAssets,当日变动= $changedNumber');
+    debugPrint('时间=${stockData.dateTime},当前价=$currentPrice,数量=$numberOfStock,股票资产=$stockAssets,现金资产=$cashAssets,总资产=$totalAssets,当日变动= $changedNumber');
   }
 }

@@ -83,7 +83,7 @@ class _TradingStrategyPageState extends State<TradingStrategyPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Text(data.date),
+        Text(data.dateTime),
         Text('${data.start}'),
         Text('${data.end}'),
         Text('${data.max}'),
