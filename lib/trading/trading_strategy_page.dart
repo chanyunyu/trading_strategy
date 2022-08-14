@@ -40,10 +40,42 @@ class _TradingStrategyPageState extends State<TradingStrategyPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  const Text('daily'),
+                  Switch(
+                    value: Provider.of<TradingStrategyModel>(context).isDaily,
+                    onChanged: (bool value) {
+                      if (value) {
+                        Provider.of<TradingStrategyModel>(context, listen: false).period = StockDataPeriod.daily;
+                      }
+                    },
+                  ),
+                  const Text('weekly'),
+                  Switch(
+                    value: Provider.of<TradingStrategyModel>(context).isWeekly,
+                    onChanged: (bool value) {
+                      if (value) {
+                        Provider.of<TradingStrategyModel>(context, listen: false).period = StockDataPeriod.weekly;
+                      }
+                    },
+                  ),
+                  const Text('monthly'),
+                  Switch(
+                    value: Provider.of<TradingStrategyModel>(context).isMonthly,
+                    onChanged: (bool value) {
+                      if (value) {
+                        Provider.of<TradingStrategyModel>(context, listen: false).period = StockDataPeriod.monthly;
+                      }
+                    },
+                  ),
                   ElevatedButton(
                     onPressed: () => Provider.of<TradingStrategyModel>(context, listen: false).simulateStrategy(),
                     child: const Text('开始模拟'),
                   ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
                   Text('总资产：${tradingStrategy.totalAssets}'),
                   Text('现金资产：${tradingStrategy.cashAssets}'),
                   Text('股票资产：${tradingStrategy.stockAssets}'),
@@ -61,14 +93,9 @@ class _TradingStrategyPageState extends State<TradingStrategyPage> {
                 ],
               ),
               Flexible(
-                child: ChangeNotifierProvider(
-                  create: (BuildContext context) => TradingStrategyModel(stockCode: stockCode),
-                  builder: (BuildContext context, Widget? child) {
-                    return ListDataWidget<TradingStrategyModel>(
-                      builder: buildItem,
-                      loadMoreEnable: false,
-                    );
-                  },
+                child: ListDataWidget<TradingStrategyModel>(
+                  builder: buildItem,
+                  loadMoreEnable: false,
                 ),
               ),
             ],
