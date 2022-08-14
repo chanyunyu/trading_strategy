@@ -1,4 +1,4 @@
 library stock;
 
-export 'data/data.dart';
-export 'trading/trading.dart';
+export 'daily_stock_data.dart';
+export 'stock_data.dart';

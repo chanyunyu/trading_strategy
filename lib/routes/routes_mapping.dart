@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trading_strategy/stock/stock.dart';
+import 'package:trading_strategy/trading/trading.dart';
 
 import 'routes_constants.dart';
 

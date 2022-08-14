@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:trading_strategy/stock/data/data.dart';
-import 'package:trading_strategy/stock/trading/strategy/strategy_unit.dart';
+import 'package:trading_strategy/stock/stock.dart';
+
+import 'strategy_unit.dart';
 
 class TradingStrategy {
   double cashAssets = 1000000.0;

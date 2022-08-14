@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:trading_strategy/data/data.dart';
-import 'package:trading_strategy/stock/data/data.dart';
-import 'package:trading_strategy/stock/trading/strategy/trading_strategy.dart';
-import 'package:trading_strategy/stock/trading/trading_strategy_network.dart';
+import 'package:trading_strategy/stock/stock.dart';
+import 'package:trading_strategy/trading/strategy/trading_strategy.dart';
+import 'package:trading_strategy/trading/trading_strategy_network.dart';
 
 class TradingStrategyModel extends ChangeNotifier with ListDataModel<DailyStockListData> {
   String stockCode;

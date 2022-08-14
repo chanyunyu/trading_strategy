@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:trading_strategy/network/network.dart';
-import 'package:trading_strategy/stock/data/daily_stock_data.dart';
+import 'package:trading_strategy/stock/daily_stock_data.dart';
 
 class TradingStrategyNetwork {
   static Future<DailyStockListData> loadStockListData({

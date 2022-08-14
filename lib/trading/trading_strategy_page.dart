@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:trading_strategy/data/data.dart';
-import 'package:trading_strategy/data/list_data_widget.dart';
 import 'package:trading_strategy/stock/stock.dart';
-import 'package:trading_strategy/stock/trading/strategy/strategy.dart';
+
+import 'strategy/strategy.dart';
+import 'trading_strategy_model.dart';
 
 class TradingStrategyPage extends StatefulWidget {
   const TradingStrategyPage({Key? key}) : super(key: key);
